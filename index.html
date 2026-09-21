@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- IMPORTANT FOR PHONES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#080808">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>NEW LOOK BARBERSHOP | Giyani</title>
+
+    <meta
+        name="description"
+        content="NEW LOOK BARBERSHOP in Giyani Section D. Premium haircuts, fades, beard grooming and men's styling."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #080808;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-width: 320px;
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        /* =========================================================
+           TYPOGRAPHY
+        ========================================================= */
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .logo,
+        .service-number,
+        .footer-logo {
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+        }
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
+            padding: 14px 28px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid #d6a84f;
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                color 0.25s ease,
+                box-shadow 0.25s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #d6a84f;
+            color: #080808;
+        }
+
+        .btn-primary:hover {
+            background: #ffffff;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(214, 168, 79, 0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #ffffff;
+        }
+
+        .btn-outline:hover {
+            background: #d6a84f;
+            color: #080808;
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(8, 8, 8, 0.94);
+
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            padding-top: env(safe-area-inset-top);
+
+            transition: background 0.3s ease;
+        }
+
+        .navbar {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: relative;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #d6a84f;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #cccccc;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #d6a84f;
+        }
+
+        .nav-button {
+            background: #d6a84f;
+            color: #080808 !important;
+            padding: 11px 20px;
+            border-radius: 5px;
+        }
+
+        .nav-button:hover {
+            background: #ffffff !important;
+            color: #080808 !important;
+        }
+
+        .menu-button {
+            display: none;
+
+            width: 46px;
+            height: 46px;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+
+            background: transparent;
+            color: #ffffff;
+
+            font-size: 24px;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100svh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            padding-top: 100px;
+            padding-bottom: 70px;
+
+            background:
+                linear-gradient(
+                    rgba(8, 8, 8, 0.76),
+                    rgba(8, 8, 8, 0.92)
+                ),
+                url("https://images.unsplash.com/photo-1622288432450-277d0fef5ed6?auto=format&fit=crop&w=1800&q=80")
+                center center / cover no-repeat;
+
+            background-color: #101010;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .hero-tag {
+            color: #d6a84f;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 20px;
+
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: clamp(52px, 10vw, 110px);
+            line-height: 0.92;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #d6a84f;
+            display: block;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            font-size: clamp(16px, 2vw, 18px);
+
+            color: #cccccc;
+
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading span {
+            display: block;
+
+            color: #d6a84f;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(34px, 6vw, 54px);
+            line-height: 1;
+        }
+
+        .section-heading p {
+            max-width: 600px;
+            margin: 15px auto 0;
+
+            color: #999999;
+
+            font-size: 15px;
+        }
+
+        /* =========================================================
+           SERVICES
+        ========================================================= */
+
+        .services {
+            background: #0d0d0d;
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        .service-card {
+            background: #141414;
+
+            padding: 34px 28px;
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+
+            border-radius: 7px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .service-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 3px;
+
+            background: #d6a84f;
+
+            opacity: 0;
+
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(214, 168, 79, 0.35);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-number {
+            color: #d6a84f;
+
+            font-size: 38px;
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+        .service-card h3 {
+            font-size: 23px;
+            margin: 16px 0 12px;
+        }
+
+        .service-card p {
+            color: #999999;
+
+            font-size: 14px;
+
+            margin-bottom: 25px;
+        }
+
+        .price {
+            color: #d6a84f;
+
+            font-family: "Oswald", sans-serif;
+
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           PROMO
+        ========================================================= */
+
+        .promo {
+            padding: 100px 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 8, 8, 0.95),
+                    rgba(8, 8, 8, 0.65)
+                ),
+                url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1800&q=80")
+                center / cover no-repeat;
+
+            background-color: #111111;
+        }
+
+        .promo-box {
+            max-width: 650px;
+        }
+
+        .promo-box span {
+            color: #d6a84f;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .promo-box h2 {
+            font-size: clamp(38px, 7vw, 60px);
+            line-height: 1.02;
+
+            margin: 15px 0;
+        }
+
+        .promo-box p {
+            color: #dddddd;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+        /* =========================================================
+           GALLERY
+        ========================================================= */
+
+        .gallery-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 380px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 6px;
+
+            background: #151515;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+
+            background: #151515;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about {
+            background: #0d0d0d;
+        }
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .about-image {
+            overflow: hidden;
+            border-radius: 7px;
+
+            background: #151515;
+        }
+
+        .about-image img {
+            height: 560px;
+
+            object-fit: cover;
+
+            background: #151515;
+        }
+
+        .about-content span {
+            color: #d6a84f;
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .about-content h2 {
+            font-size: clamp(36px, 6vw, 56px);
+
+            line-height: 1.03;
+
+            margin: 14px 0 24px;
+        }
+
+        .about-content p {
+            color: #aaaaaa;
+
+            font-size: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .location-tag {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 8px;
+
+            max-width: 100%;
+
+            background: rgba(214, 168, 79, 0.1);
+
+            border: 1px solid rgba(214, 168, 79, 0.3);
+
+            padding: 10px 15px;
+
+            border-radius: 5px;
+
+            color: #d6a84f;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            margin-bottom: 25px;
+        }
+
+        /* =========================================================
+           BOOKING
+        ========================================================= */
+
+        .booking {
+            background: #111111;
+        }
+
+        .booking-grid {
+            display: grid;
+
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+            gap: 45px;
+
+            align-items: start;
+        }
+
+        .booking-info h2 {
+            font-size: clamp(36px, 6vw, 52px);
+
+            line-height: 1.04;
+
+            margin-bottom: 20px;
+        }
+
+        .booking-info > p {
+            color: #aaaaaa;
+
+            font-size: 15px;
+
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background: #181818;
+
+            padding: 22px;
+
+            border-radius: 6px;
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+
+            margin-bottom: 14px;
+        }
+
+        .info-card strong {
+            display: block;
+
+            color: #d6a84f;
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+        }
+
+        .info-card p {
+            color: #dddddd;
+
+            font-size: 14px;
+
+            margin: 0;
+        }
+
+        .booking-form {
+            background: #181818;
+
+            padding: 35px;
+
+            border-radius: 7px;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+
+            color: #cccccc;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 7px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            display: block;
+
+            width: 100%;
+            max-width: 100%;
+
+            padding: 14px;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            border-radius: 5px;
+
+            outline: none;
+
+            background: #0d0d0d;
+
+            color: #ffffff;
+
+            font-size: 16px;
+
+            font-family: inherit;
+
+            appearance: auto;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #d6a84f;
+        }
+
+        .form-group textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .booking-form .btn {
+            width: 100%;
+        }
+
+        #bookingMessage {
+            display: none;
+
+            margin-top: 16px;
+
+            padding: 14px;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+
+            text-align: center;
+
+            overflow-wrap: anywhere;
+        }
+
+        #bookingMessage.success {
+            display: block;
+
+            color: #d6a84f;
+
+            background: rgba(214, 168, 79, 0.1);
+
+            border: 1px solid rgba(214, 168, 79, 0.3);
+        }
+
+        #bookingMessage.error {
+            display: block;
+
+            color: #ff8d8d;
+
+            background: rgba(255, 70, 70, 0.08);
+
+            border: 1px solid rgba(255, 70, 70, 0.25);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            padding: 65px 0 25px;
+
+            background: #040404;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns: 2fr 1fr 1fr;
+
+            gap: 45px;
+
+            margin-bottom: 45px;
+        }
+
+        .footer-logo {
+            font-size: 26px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: #d6a84f;
+        }
+
+        footer p {
+            color: #888888;
+
+            font-size: 14px;
+
+            max-width: 430px;
+        }
+
+        footer h4 {
+            color: #d6a84f;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 9px;
+        }
+
+        footer a {
+            color: #aaaaaa;
+
+            font-size: 14px;
+
+            overflow-wrap: anywhere;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            padding-top: 24px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+            text-align: center;
+
+            color: #666666;
+
+            font-size: 12px;
+        }
+
+        /* =========================================================
+           REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+        /* =========================================================
+           TABLETS
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .service-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-grid,
+            .booking-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .about-image img {
+                height: 450px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* =========================================================
+           MOBILE NAV
+        ========================================================= */
+
+        @media (max-width: 768px) {
+
+            .container {
+                width: min(100% - 24px, 1180px);
+            }
+
+            .navbar {
+                min-height: 70px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .menu-button {
+                display: flex;
+
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links {
+                position: fixed;
+
+                top: calc(70px + env(safe-area-inset-top));
+                left: 12px;
+                right: 12px;
+
+                width: auto;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 5px;
+
+                padding: 12px;
+
+                background: #101010;
+
+                border: 1px solid rgba(255, 255, 255, 0.1);
+
+                border-radius: 8px;
+
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: flex;
+
+                align-items: center;
+
+                width: 100%;
+
+                min-height: 48px;
+
+                padding: 10px 14px;
+
+                border-radius: 5px;
+            }
+
+            .nav-links a:hover {
+                background: rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-button {
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 100svh;
+
+                padding-top: 110px;
+
+                background-position: 60% center;
+            }
+
+            .hero h1 {
+                font-size: clamp(52px, 17vw, 82px);
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                width: 100%;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .service-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                padding: 30px 24px;
+            }
+
+            .gallery-item {
+                height: 330px;
+            }
+
+            .about-image img {
+                height: 380px;
+            }
+
+            .booking-form {
+                padding: 25px 18px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .promo {
+                padding: 80px 0;
+                background-attachment: scroll;
+            }
+        }
+
+        /* =========================================================
+           SMALL PHONES
+        ========================================================= */
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: calc(100% - 20px);
+            }
+
+            .hero {
+                padding-top: 100px;
+            }
+
+            .hero-tag {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .section-heading {
+                margin-bottom: 38px;
+            }
+
+            .section-heading h2 {
+                font-size: 35px;
+            }
+
+            .gallery-item {
+                height: 280px;
+            }
+
+            .about-image img {
+                height: 320px;
+            }
+
+            .booking-form {
+                padding: 22px 15px;
+            }
+
+            .info-card {
+                padding: 18px;
+            }
+
+            .promo-box h2 {
+                font-size: 40px;
+            }
+        }
+
+        /* =========================================================
+           VERY SMALL PHONES
+        ========================================================= */
+
+        @media (max-width: 360px) {
+
+            .logo {
+                font-size: 17px;
+                letter-spacing: 1px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .btn {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .service-card {
+                padding: 25px 20px;
+            }
+        }
+
+        /* =========================================================
+           ACCESSIBILITY / REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header id="header">
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                NEW <span>LOOK</span>
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navLinks"
+            >
+                ☰
+            </button>
+
+            <nav aria-label="Main navigation">
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="#gallery">Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#booking" class="nav-button">
+                            Book Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    Giyani, Section D — Luxury Grooming
+                </span>
+
+                <h1>
+                    LOOK
+                    <span>SHARP.</span>
+                </h1>
+
+                <p>
+                    Precision cuts, immaculate skin fades, and luxury beard
+                    care. Experience quality barbering in Giyani.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#booking"
+                        class="btn btn-primary"
+                    >
+                        Book Your Cut
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="btn btn-outline"
+                    >
+                        View Services
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SERVICES
+    ========================================================= -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Our Craft</span>
+
+                <h2>Services & Pricing</h2>
+
+                <p>
+                    Professional barbering services tailored to your style.
+                </p>
+
+            </div>
+
+
+            <div class="service-grid">
+
+                <div class="service-card reveal">
+                    <div class="service-number">01</div>
+
+                    <h3>Classic Cut</h3>
+
+                    <p>
+                        A refined cut using scissors and clippers,
+                        tailored to your head shape.
+                    </p>
+
+                    <div class="price">R120</div>
+                </div>
+
+
+                <div class="service-card reveal">
+                    <div class="service-number">02</div>
+
+                    <h3>Fade</h3>
+
+                    <p>
+                        High, mid, low, or taper fades with clean
+                        transitions and crisp lines.
+                    </p>
+
+                    <div class="price">R150</div>
+                </div>
+
+
+                <div class="service-card reveal">
+                    <div class="service-number">03</div>
+
+                    <h3>Beard Grooming</h3>
+
+                    <p>
+                        Professional beard trimming, shaping,
+                        lining and detailing.
+                    </p>
+
+                    <div class="price">R80</div>
+                </div>
+
+
+                <div class="service-card reveal">
+                    <div class="service-number">04</div>
+
+                    <h3>Cut + Beard</h3>
+
+                    <p>
+                        Full haircut or fade combined with
+                        detailed beard grooming.
+                    </p>
+
+                    <div class="price">R200</div>
+                </div>
+
+
+                <div class="service-card reveal">
+                    <div class="service-number">05</div>
+
+                    <h3>Kids Cut</h3>
+
+                    <p>
+                        Clean and stylish haircuts for young
+                        gentlemen.
+                    </p>
+
+                    <div class="price">R100</div>
+                </div>
+
+
+                <div class="service-card reveal">
+                    <div class="service-number">06</div>
+
+                    <h3>VIP Grooming</h3>
+
+                    <p>
+                        Premium cut, beard treatment and
+                        luxury grooming experience.
+                    </p>
+
+                    <div class="price">R250</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PROMO
+    ========================================================= -->
+
+    <section class="promo">
+
+        <div class="container">
+
+            <div class="promo-box reveal">
+
+                <span>Precision & Style</span>
+
+                <h2>
+                    Elevate Your Everyday Look.
+                </h2>
+
+                <p>
+                    Step out with renewed confidence.
+                    Reserve your chair today.
+                </p>
+
+                <a
+                    href="#booking"
+                    class="btn btn-primary"
+                >
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         GALLERY
+    ========================================================= -->
+
+    <section id="gallery">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <span>Portfolio</span>
+
+                <h2>Our Recent Work</h2>
+
+                <p>
+                    Sharp lineups, clean fades and professional grooming.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80"
+                        alt="Professional men's haircut"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80"
+                        alt="Barber styling a haircut"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?auto=format&fit=crop&w=900&q=80"
+                        alt="Men's grooming"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80"
+                        alt="Barber shop haircut"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=80"
+                        alt="Sharp men's haircut"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+
+                <div class="gallery-item reveal">
+                    <img
+                        src="https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=900&q=80"
+                        alt="Fresh fade haircut"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ABOUT
+    ========================================================= -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image reveal">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80"
+                        alt="Professional barber shop interior"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+
+                <div class="about-content reveal">
+
+                    <span>About Our Shop</span>
+
+                    <h2>
+                        More Than A Haircut.
+                        It's A Standard.
+                    </h2>
+
+                    <div class="location-tag">
+                        📍 Section D, Giyani, Limpopo
+                    </div>
+
+                    <p>
+                        NEW LOOK BARBERSHOP brings professional
+                        men's grooming to Giyani.
+                    </p>
+
+                    <p>
+                        Whether you need a quick edge-up,
+                        sharp skin fade, or beard grooming,
+                        our goal is to give every customer
+                        a clean and confident look.
+                    </p>
+
+                    <a
+                        href="#booking"
+                        class="btn btn-primary"
+                    >
+                        Book Your Visit
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         BOOKING
+    ========================================================= -->
+
+    <section class="booking" id="booking">
+
+        <div class="container">
+
+            <div class="booking-grid">
+
+                <div class="booking-info reveal">
+
+                    <h2>
+                        Book Your Appointment
+                    </h2>
+
+                    <p>
+                        Complete the form and WhatsApp will open
+                        with your booking request ready to send.
+                    </p>
+
+
+                    <div class="info-card">
+
+                        <strong>Location</strong>
+
+                        <p>
+                            Giyani, Section D, Limpopo,
+                            South Africa
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <strong>Opening Hours</strong>
+
+                        <p>
+                            Monday – Saturday:
+                            08:00 – 18:00
+                            <br>
+
+                            Sunday:
+                            09:00 – 15:00
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <strong>Direct Contact</strong>
+
+                        <p>
+                            WhatsApp:
+                            071 234 5678
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    class="booking-form reveal"
+                    id="bookingForm"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="e.g. Sivo Baloyi"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 071 234 5678"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Select Service *
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                        >
+
+                            <option value="">
+                                Choose a service
+                            </option>
+
+                            <option value="Classic Cut - R120">
+                                Classic Cut - R120
+                            </option>
+
+                            <option value="Fade - R150">
+                                Fade - R150
+                            </option>
+
+                            <option value="Beard Grooming - R80">
+                                Beard Grooming - R80
+                            </option>
+
+                            <option value="Cut + Beard - R200">
+                                Cut + Beard - R200
+                            </option>
+
+                            <option value="Kids Cut - R100">
+                                Kids Cut - R100
+                            </option>
+
+                            <option value="VIP Grooming - R250">
+                                VIP Grooming - R250
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="date">
+                            Preferred Date *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Additional Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Any specific haircut request?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        id="bookingButton"
+                    >
+                        Send WhatsApp Request
+                    </button>
+
+
+                    <div
+                        id="bookingMessage"
+                        role="status"
+                        aria-live="polite"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+
+                    <div class="footer-logo">
+                        NEW <span>LOOK</span>
+                    </div>
+
+                    <p>
+                        Premium men's grooming located in
+                        Giyani, Section D.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Quick Links</h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+
+                        <li>
+                            <a href="#gallery">Gallery</a>
+                        </li>
+
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+
+                        <li>
+                            <a href="#booking">Book Now</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <h4>Contact Us</h4>
+
+                    <ul>
+
+                        <li>
+                            <a
+                                href="https://wa.me/27712345678"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                WhatsApp: 071 234 5678
+                            </a>
+                        </li>
+
+                        <li>
+                            Giyani, Section D
+                        </li>
+
+                        <li>
+                            Mon - Sat: 08:00 - 18:00
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © <span id="currentYear"></span>
+                NEW LOOK BARBERSHOP.
+                All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        const menuButton = document.getElementById("menuButton");
+        const navLinks = document.getElementById("navLinks");
+
+        function closeMenu() {
+
+            if (!menuButton || !navLinks) return;
+
+            navLinks.classList.remove("active");
+
+            menuButton.textContent = "☰";
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            document.body.classList.remove("menu-open");
+        }
+
+
+        function openMenu() {
+
+            if (!menuButton || !navLinks) return;
+
+            navLinks.classList.add("active");
+
+            menuButton.textContent = "✕";
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            document.body.classList.add("menu-open");
+        }
+
+
+        if (menuButton && navLinks) {
+
+            menuButton.addEventListener("click", function () {
+
+                const isOpen =
+                    navLinks.classList.contains("active");
+
+                if (isOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+
+            });
+
+
+            document
+                .querySelectorAll("#navLinks a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        closeMenu
+                    );
+
+                });
+
+
+            document.addEventListener(
+                "keydown",
+                function (event) {
+
+                    if (event.key === "Escape") {
+                        closeMenu();
+                    }
+
+                }
+            );
+
+
+            document.addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        window.innerWidth <= 768 &&
+                        navLinks.classList.contains("active") &&
+                        !navLinks.contains(event.target) &&
+                        !menuButton.contains(event.target)
+                    ) {
+
+                        closeMenu();
+
+                    }
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           HEADER SCROLL
+        ========================================================= */
+
+        const header = document.getElementById("header");
+
+        function updateHeader() {
+
+            if (!header) return;
+
+            if (window.scrollY > 40) {
+
+                header.style.background =
+                    "rgba(4,4,4,0.98)";
+
+            } else {
+
+                header.style.background =
+                    "rgba(8,8,8,0.94)";
+
+            }
+
+        }
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+        updateHeader();
+
+
+        /* =========================================================
+           CURRENT YEAR
+        ========================================================= */
+
+        const currentYear =
+            document.getElementById("currentYear");
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =========================================================
+           DATE PICKER
+        ========================================================= */
+
+        const dateInput =
+            document.getElementById("date");
+
+        function getToday() {
+
+            const today = new Date();
+
+            const year =
+                today.getFullYear();
+
+            const month =
+                String(today.getMonth() + 1)
+                    .padStart(2, "0");
+
+            const day =
+                String(today.getDate())
+                    .padStart(2, "0");
+
+            return `${year}-${month}-${day}`;
+
+        }
+
+        if (dateInput) {
+
+            dateInput.min = getToday();
+
+        }
+
+
+        /* =========================================================
+           BOOKING FORM
+        ========================================================= */
+
+        const bookingForm =
+            document.getElementById("bookingForm");
+
+        const bookingMessage =
+            document.getElementById("bookingMessage");
+
+        const bookingButton =
+            document.getElementById("bookingButton");
+
+
+        function showBookingMessage(
+            message,
+            type
+        ) {
+
+            if (!bookingMessage) return;
+
+            bookingMessage.textContent = message;
+
+            bookingMessage.className = type;
+
+            bookingMessage.style.display = "block";
+
+        }
+
+
+        if (bookingForm) {
+
+            bookingForm.addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById("name")
+                            .value
+                            .trim();
+
+
+                    const phone =
+                        document
+                            .getElementById("phone")
+                            .value
+                            .trim();
+
+
+                    const service =
+                        document
+                            .getElementById("service")
+                            .value;
+
+
+                    const date =
+                        document
+                            .getElementById("date")
+                            .value;
+
+
+                    const message =
+                        document
+                            .getElementById("message")
+                            .value
+                            .trim();
+
+
+                    /* Required fields */
+
+                    if (
+                        !name ||
+                        !phone ||
+                        !service ||
+                        !date
+                    ) {
+
+                        showBookingMessage(
+                            "Please complete all required fields.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* Phone validation */
+
+                    const cleanPhone =
+                        phone.replace(
+                            /[\s-]/g,
+                            ""
+                        );
+
+
+                    if (
+                        !/^[0-9+()]{8,20}$/.test(
+                            cleanPhone
+                        )
+                    ) {
+
+                        showBookingMessage(
+                            "Please enter a valid phone number.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* Prevent old dates */
+
+                    if (date < getToday()) {
+
+                        showBookingMessage(
+                            "Please choose today or a future date.",
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* Format date safely */
+
+                    const parsedDate =
+                        new Date(
+                            date + "T00:00:00"
+                        );
+
+
+                    const formattedDate =
+                        parsedDate.toLocaleDateString(
+                            "en-ZA",
+                            {
+                                day: "2-digit",
+                                month: "long",
+                                year: "numeric"
+                            }
+                        );
+
+
+                    /* Barber WhatsApp */
+
+                    const whatsappNumber =
+                        "27712345678";
+
+
+                    /* WhatsApp message */
+
+                    const whatsappText =
+`🔥 NEW LOOK BARBERSHOP — BOOKING REQUEST
+
+Name: ${name}
+Phone: ${phone}
+Service: ${service}
+Preferred Date: ${formattedDate}
+Location: Giyani, Section D
+Message: ${message || "No additional notes."}`;
+
+
+                    const whatsappURL =
+                        "https://wa.me/" +
+                        whatsappNumber +
+                        "?text=" +
+                        encodeURIComponent(
+                            whatsappText
+                        );
+
+
+                    /* Disable button */
+
+                    if (bookingButton) {
+
+                        bookingButton.disabled =
+                            true;
+
+                        bookingButton.textContent =
+                            "Opening WhatsApp...";
+
+                    }
+
+
+                    showBookingMessage(
+                        "Opening WhatsApp...",
+                        "success"
+                    );
+
+
+                    /*
+                       Small delay helps mobile browsers
+                       process the click before opening WhatsApp.
+                    */
+
+                    setTimeout(
+                        function () {
+
+                            window.location.href =
+                                whatsappURL;
+
+                            if (bookingButton) {
+
+                                bookingButton.disabled =
+                                    false;
+
+                                bookingButton.textContent =
+                                    "Send WhatsApp Request";
+
+                            }
+
+                        },
+                        400
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           IMAGE ERROR PROTECTION
+        ========================================================= */
+
+        const images =
+            document.querySelectorAll("img");
+
+
+        images.forEach(function (image) {
+
+            image.addEventListener(
+                "error",
+                function () {
+
+                    /*
+                       Hide broken image instead of showing
+                       the browser's broken-image icon.
+                    */
+
+                    image.style.display = "none";
+
+                    if (image.parentElement) {
+
+                        image.parentElement.style.background =
+                            "linear-gradient(135deg, #151515, #252525)";
+
+                    }
+
+                }
+            );
+
+        });
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+            const observer =
+                new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    entry.target
+                                        .classList
+                                        .add("active");
+
+                                    observer.unobserve(
+                                        entry.target
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    },
+                    {
+                        threshold: 0.08
+                    }
+                );
+
+
+            revealElements.forEach(
+                function (element) {
+
+                    observer.observe(element);
+
+                }
+            );
+
+        } else {
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU WHEN RESIZING
+        ========================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 768) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
